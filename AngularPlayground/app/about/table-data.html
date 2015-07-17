@@ -1,0 +1,7 @@
+﻿<h2>Fine Scotches</h2>
+<table border="1">
+    <tr ng-repeat="scotch in about.scotches">
+        <td>{{ scotch.name }}</td>
+        <td>{{ scotch.price | currency:"USD$" }}</td>
+    </tr>
+</table>

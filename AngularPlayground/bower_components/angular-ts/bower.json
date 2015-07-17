@@ -1,0 +1,7 @@
+{
+  "name": "angular-ts",
+  "version": "1.0.0",
+  "dependencies": {
+    "dt-jquery2": "latest"
+  }
+}
