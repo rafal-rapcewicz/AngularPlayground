@@ -7,6 +7,8 @@ module Application.Directives {
     export var sampleDirective: () => ng.IDirective = () => {
         return {
             restrict: 'AE',
+            //scope : false ( Directive uses its parent scope (~two-way binding) )
+            //scope: true ( Directive gets a new scope, still with inheritance(~one-way binding) )
             scope: {
                 name: '@' //one-way binding
                 // '=' => two-way binding
