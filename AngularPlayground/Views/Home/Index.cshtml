@@ -21,7 +21,17 @@
 
 </div>
 
+<div id="SecoundApp" style="background-color: orange" ng-controller="secoundCtrl as sec">
+    <h1>SECOUND APP</h1>
+
+    <div sample-directive name="{{sec.name}}"></div>
+
+    <button ng-click="sec.onClick()">Click me (2)</button>
+</div>
+
 @section scripts {
-    <script src="~/app/about/scotchCtrl.js"></script>
-    <script src="~/app/home/main.js"></script>
+    <script src="~/app/about/scotchCtrl.js"></script>    
+    <script src="~/app/home/secoundCtrl.js"></script>
+    <script src="~/app/home/sampleDirective.js"></script>
+    <script src="~/app/main.js"></script>
 }

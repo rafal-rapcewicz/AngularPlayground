@@ -1,5 +1,7 @@
-/// <reference path="../_all.d.ts" />
-/// <reference path="../about/scotchctrl.ts" />
+/// <reference path="_all.d.ts" />
+/// <reference path="about/scotchctrl.ts" />
+/// <reference path="home/secoundctrl.ts" />
+/// <reference path="home/sampledirective.ts" />
 
 'use strict';
 
@@ -58,4 +60,12 @@ module Application {
 
     });
 
+    var app2 = angular.module('app2', []);
+
+    app2.controller('secoundCtrl', Application.Home.SecoundCtrl);
+    app2.directive('sampleDirective', Application.Directives.sampleDirective);
+
+    angular.element(document).ready(() => {
+        angular.bootstrap(document.getElementById('SecoundApp'), ['app2']);        
+    });
 }

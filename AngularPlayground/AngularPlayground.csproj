@@ -322,7 +322,9 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\about\scotchCtrl.ts" />
-    <TypeScriptCompile Include="app\home\main.ts" />
+    <TypeScriptCompile Include="app\home\sampleDirective.ts" />
+    <TypeScriptCompile Include="app\home\secoundCtrl.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\_all.d.ts" />
     <TypeScriptCompile Include="bower_components\angular-ts\angular-cookies.d.ts" />
     <TypeScriptCompile Include="bower_components\angular-ts\angular-mocks.d.ts" />

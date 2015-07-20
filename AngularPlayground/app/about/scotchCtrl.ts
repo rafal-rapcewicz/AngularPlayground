@@ -1,14 +1,14 @@
-module Application.About {
-    'use strict';    
+'use strict';  
+module Application.About {  
 
     export class ScotchCtrl {        
 
         public message: string;
         public scotches: Array<any>;
 
-        public static $inject = ["$scope"];
+        public static $inject = ['$scope', '$rootScope'];
 
-        constructor(private $scope: ng.IScope) {
+        constructor(private $scope: ng.IScope, private $rootScope: ng.IRootScopeService) {
 
             this.message = 'test';
             this.scotches = [
@@ -25,6 +25,11 @@ module Application.About {
                     price: 20000
                 }
             ];
+        }
+
+        onClick = (): void => {
+            //conclusion: separate modules have separate rootScopes !!!
+            (<any>this.$rootScope).x = 2;
         }
 
     }
