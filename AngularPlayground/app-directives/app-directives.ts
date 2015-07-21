@@ -4,7 +4,8 @@
 
 module AppDirectives {
 
-    var app = angular.module('app', ['ui.router']);    
+    var app = angular.module('app', ['ui.router']);   
+    app.controller('directivesCtrl', DirectivesCtrl); 
     app.directive('dad', dad);
     app.directive('dad2', dad2);
     app.directive('son', son);

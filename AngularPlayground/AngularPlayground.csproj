@@ -334,6 +334,7 @@
     <TypeScriptCompile Include="app-directives\app-directives.ts" />
     <TypeScriptCompile Include="app-directives\pre-post-link\dad.ts" />
     <TypeScriptCompile Include="app-directives\pre-post-link\dad2.ts" />
+    <TypeScriptCompile Include="app-directives\pre-post-link\directivesCtrl.ts" />
     <TypeScriptCompile Include="app-directives\pre-post-link\son.ts" />
     <TypeScriptCompile Include="app\about\scotchCtrl.ts" />
     <TypeScriptCompile Include="app\home\sampleDirective.ts" />

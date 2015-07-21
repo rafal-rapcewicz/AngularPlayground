@@ -29,6 +29,7 @@ module AppDirectives {
                     scope.name = 'Paul';
                     scope.greeting = 'Hey, I am ';
                 },
+                // link as function is alias to link.post
                 post: (scope: IDadScope, elem: JQuery, attributes: ng.IAttributes, ngModel: ng.INgModelController) => {
 
                 }

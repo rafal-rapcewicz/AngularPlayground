@@ -9,6 +9,13 @@ module AppDirectives {
             '<son></son>' +
             '</div>' +
             '<div><label>New parent\'s name:</label><input type="text" ng-model="name" /></div>',
+            /*
+             * Order of Execution
+                Controller gets executed first
+                Pre-link gets executed next
+                Post-link gets executed last
+             */
+            scope: true, // in this way controller's scope is "isolated" : )
             controller: function () {
                 this.name = 'Paul'
             },
