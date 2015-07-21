@@ -318,6 +318,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\Libraries\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Directives.cshtml" />
+    <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -332,6 +333,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app-directives\app-directives.ts" />
     <TypeScriptCompile Include="app-directives\pre-post-link\dad.ts" />
+    <TypeScriptCompile Include="app-directives\pre-post-link\dad2.ts" />
     <TypeScriptCompile Include="app-directives\pre-post-link\son.ts" />
     <TypeScriptCompile Include="app\about\scotchCtrl.ts" />
     <TypeScriptCompile Include="app\home\sampleDirective.ts" />

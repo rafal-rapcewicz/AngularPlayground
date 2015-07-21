@@ -6,6 +6,7 @@ module AppDirectives {
 
     var app = angular.module('app', ['ui.router']);    
     app.directive('dad', dad);
+    app.directive('dad2', dad2);
     app.directive('son', son);
 
     app.config(($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
