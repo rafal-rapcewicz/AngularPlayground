@@ -5,6 +5,7 @@ module Application.About {
 
         public message: string;
         public scotches: Array<any>;
+        public button1Text: string;
 
         public static $inject = ['$scope', '$rootScope'];
 
@@ -25,11 +26,13 @@ module Application.About {
                     price: 20000
                 }
             ];
+            this.button1Text = 'Test $rootScope';
         }
 
         onClick = (): void => {
             //conclusion: separate modules have separate rootScopes !!!
-            (<any>this.$rootScope).x = 2;
+            this.$rootScope['x'] = this.$rootScope['x'] || 2;
+            this.button1Text = this.$rootScope['x'] !== 2 ? '$rootScope was changed by other module' : '$rootScope wasn\'t changed by other module';
         }
 
     }

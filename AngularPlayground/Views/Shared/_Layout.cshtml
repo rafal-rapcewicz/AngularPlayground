@@ -9,6 +9,11 @@
 </head>
 <body>
         
+    <ul class="nav nav-pills">
+        <li role="presentation"><a href="@Url.Action("Index", "Home")" data-toggle="pill">Index</a></li>
+        <li role="presentation"><a href="@Url.Action("Directives", "Home")" data-toggle="pill">Directives</a></li>
+    </ul>
+
     @RenderBody()        
 
     @Scripts.Render("~/bundles/jquery")

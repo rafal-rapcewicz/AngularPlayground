@@ -14,5 +14,10 @@ namespace AngularPlayground.Controllers
 
             return View();
         }
+
+        public ActionResult Directives()
+        {
+            return View();
+        }
     }
 }

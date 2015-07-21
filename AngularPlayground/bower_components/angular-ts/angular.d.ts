@@ -663,7 +663,7 @@ declare module ng {
         transclude?: any;
         restrict?: string;
         scope?: any;
-        link?: Function;
+        link?: any; //Function;
         compile?: Function;
     }
 
