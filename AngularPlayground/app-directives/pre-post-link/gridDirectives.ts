@@ -9,6 +9,8 @@
 
 module AppDirectives {    
 
+    const EVENT_READY_TO_RENDER: string = 'ready-to-render';
+
     export var gridScreen: (...args: any[]) => ng.IDirective = ($http: ng.IHttpService) => {
         return {
             restrict: 'E',
@@ -22,6 +24,7 @@ module AppDirectives {
             link: (scope: any, elem: JQuery, attributes: any /*ng.IAttributes*/, ngModel: ng.INgModelController) => {
                 $http.get(attributes.resource).success((response: any) => {
                     scope.rows = response.data;
+                    scope.$broadcast(EVENT_READY_TO_RENDER, scope.rows, scope.cols);
                 });
             }
         };
@@ -68,7 +71,15 @@ module AppDirectives {
 
     export var grid: () => ng.IDirective = () => {
         return {
-            restrict: 'E',            
+            restrict: 'E',
+            templateUrl: '/templates/as_table.html',
+            replace: true,
+            controller: function ($scope) {
+                $scope.$on(EVENT_READY_TO_RENDER, (e, rows, cols) => {
+                    $scope.rows = rows;
+                    $scope.cols = cols;
+                });
+            },
             link: (scope: any, elem: JQuery, attributes: ng.IAttributes, ngModel: ng.INgModelController) => {
 
             }

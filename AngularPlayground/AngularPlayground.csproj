@@ -302,6 +302,7 @@
     <Content Include="Scripts\Libraries\modernizr-2.6.2.js" />
     <Content Include="Scripts\Libraries\respond.js" />
     <Content Include="Scripts\Libraries\respond.min.js" />
+    <Content Include="templates\as_table.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
