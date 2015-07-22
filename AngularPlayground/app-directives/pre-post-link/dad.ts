@@ -22,6 +22,8 @@ module AppDirectives {
                 before all of its child directives’ link functions.
                 So child link functions can have acces to setted parent scope.
 
+                pre-link functions start execution from top parent directive ( oposite to link(post-link) )
+
                 But: It’s not a best practice to create pre-link functions whenever 
                 we introduce a child directive. Use controller instead (see dad2).
                 */

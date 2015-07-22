@@ -290,6 +290,7 @@
     <Content Include="bower_components\dt-jquery2\bower.json" />
     <Content Include="bower_components\dt-jquery2\README.md" />
     <Content Include="app-directives\pre-post-link\pre-post-link.tmpl.html" />
+    <Content Include="data\data.json" />
     <None Include="Scripts\Libraries\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Libraries\jquery-1.10.2.js" />
     <Content Include="Scripts\Libraries\jquery-1.10.2.min.js" />
@@ -335,6 +336,7 @@
     <TypeScriptCompile Include="app-directives\pre-post-link\dad.ts" />
     <TypeScriptCompile Include="app-directives\pre-post-link\dad2.ts" />
     <TypeScriptCompile Include="app-directives\pre-post-link\directivesCtrl.ts" />
+    <TypeScriptCompile Include="app-directives\pre-post-link\gridDirectives.ts" />
     <TypeScriptCompile Include="app-directives\pre-post-link\son.ts" />
     <TypeScriptCompile Include="app\about\scotchCtrl.ts" />
     <TypeScriptCompile Include="app\home\sampleDirective.ts" />

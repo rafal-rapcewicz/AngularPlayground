@@ -10,6 +10,12 @@ module AppDirectives {
     app.directive('dad2', dad2);
     app.directive('son', son);
 
+    app.directive('gridScreen', gridScreen);
+    app.directive('gridColumns', gridColumns);
+    app.directive('gridColumn', gridColumn);
+    app.directive('grid', grid);
+    app.directive('withInlineEditor', withInlineEditor);
+
     app.config(($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
 
         $urlRouterProvider.otherwise('/home');
