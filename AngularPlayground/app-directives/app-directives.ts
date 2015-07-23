@@ -4,7 +4,10 @@
 
 module AppDirectives {
 
-    var app = angular.module('app', ['ui.router']);   
+    var app = angular.module('app', ['ui.router']);
+    app.run(($templateRequest) => {
+        $templateRequest('/templates/editor.html');
+    });
     app.controller('directivesCtrl', DirectivesCtrl); 
     app.directive('dad', dad);
     app.directive('dad2', dad2);
@@ -15,6 +18,7 @@ module AppDirectives {
     app.directive('gridColumn', gridColumn);
     app.directive('grid', grid);
     app.directive('withInlineEditor', withInlineEditor);
+    app.directive('editorInitializer', editorInitializer);    
 
     app.config(($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
 

@@ -10,12 +10,15 @@
 module AppDirectives {    
 
     const EVENT_READY_TO_RENDER: string = 'ready-to-render';
+    const EVENT_EDIT: string = 'edit';
 
     export var gridScreen: (...args: any[]) => ng.IDirective = ($http: ng.IHttpService) => {
         return {
             restrict: 'E',
             controller: function($scope) {
                 this.setEditor = (editor) => {
+                    //unshift : dd new items to the beginning of an array
+                    $scope.cols.unshift(editor);
                 },
                 this.setColumns = (cols) => {
                     $scope.cols = cols;
@@ -88,9 +91,31 @@ module AppDirectives {
 
     export var withInlineEditor: () => ng.IDirective = () => {
         return {
-            restrict: 'A',            
-            link: (scope: any, elem: JQuery, attributes: ng.IAttributes, ngModel: ng.INgModelController) => {
+            restrict: 'A',
+            require: '^gridScreen',
+            link: (scope: any, elem: JQuery, attributes: ng.IAttributes, gridScreenController: any) => {
+                gridScreenController.setEditor({
+                    title: 'Edit',
+                    field: ''
+                });
+            }
+        };
+    };
 
+    export var editorInitializer: (...args: any[]) => ng.IDirective = ($compile: ng.ICompileService, $templateCache: ng.ITemplateCacheService) => {
+        return {
+            restrict: 'E',
+            templateUrl: '/templates/editor_initializer.html',            
+            controller: function ($scope) {
+                $scope.edit = row => {
+                    $scope.$broadcast(EVENT_EDIT, row);
+                };
+            },
+            link: (scope: any, elem: JQuery, attributes: ng.IAttributes, gridScreenController: any) => {
+                scope.$on(EVENT_EDIT, (e, row) => {
+                    var editor = $compile($templateCache.get('/templates/editor.html'))(scope);
+                    $(editor).insertAfter(elem.parents('tr'));
+                });
             }
         };
     };

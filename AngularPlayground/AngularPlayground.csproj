@@ -242,13 +242,24 @@
     <Content Include="bower_components\angular\angular.js" />
     <Content Include="bower_components\angular\angular.min.js" />
     <Content Include="bower_components\angular\index.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\Libraries\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\Libraries\bootstrap.js" />
     <Content Include="Scripts\Libraries\bootstrap.min.js" />
+    <Content Include="Scripts\Libraries\jquery-2.1.4.js" />
+    <Content Include="Scripts\Libraries\jquery-2.1.4.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -291,18 +302,18 @@
     <Content Include="bower_components\dt-jquery2\README.md" />
     <Content Include="app-directives\pre-post-link\pre-post-link.tmpl.html" />
     <Content Include="data\data.json" />
-    <None Include="Scripts\Libraries\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\Libraries\jquery-1.10.2.js" />
-    <Content Include="Scripts\Libraries\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\Libraries\jquery-2.1.4.min.map" />
     <None Include="Scripts\Libraries\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\Libraries\jquery.validate.js" />
     <Content Include="Scripts\Libraries\jquery.validate.min.js" />
     <Content Include="Scripts\Libraries\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\Libraries\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\Libraries\modernizr-2.6.2.js" />
     <Content Include="Scripts\Libraries\respond.js" />
     <Content Include="Scripts\Libraries\respond.min.js" />
+    <Content Include="Scripts\Libraries\modernizr-2.8.3.js" />
     <Content Include="templates\as_table.html" />
+    <Content Include="templates\editor.html" />
+    <Content Include="templates\editor_initializer.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -318,7 +329,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Scripts\Libraries\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Directives.cshtml" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
@@ -326,9 +336,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
