@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "AdvancedUI";
+}
+
+<h2>AdvancedUI</h2>
+
+<div ng-app="advApp">
+    <form name="myForm" ng-controller="advCtrl">
+        <label for="postal">Post code:</label>
+        <input id="postal" name="myField" type="text" ng-model="postCode" postal-code-validator />
+        <div ng-if="myForm.myField.$error.postal">You did not enter a valid postal code</div>
+    </form>
+
+    <div ng-controller="TicTacToeCtrl" tic-tac-toe="9">
+        {{ cells[index] }}
+    </div>
+
+</div>
+
+@section scripts {
+   
+    <script src="~/app-advanced-ui/app-adv.js"></script>
+
+}

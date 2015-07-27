@@ -19,5 +19,10 @@ namespace AngularPlayground.Controllers
         {
             return View();
         }
+
+        public ActionResult AdvancedUI()
+        {
+            return View();
+        }
     }
 }
